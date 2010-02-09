@@ -1,0 +1,22 @@
+@import url("reset.css");
+body{
+	width: 100%;
+	text-align: center; 
+	background: #f1f1f1 url("/images/public/bg1.png") repeat-x;
+	
+}
+#wrapper{
+	width: 1002px;
+	min-height: 500px;
+	margin: 0px auto; 
+	
+	text-align: left;
+}
+#header{
+	 background:url("/images/public/bg0.png") no-repeat;
+	 height: 112px;
+}
+#body{
+	margin-top: 10px; 
+	background-color:  #ffffff;
+}
