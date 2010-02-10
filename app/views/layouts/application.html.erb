@@ -3,14 +3,16 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 	<title><%= h(yield(:title) || "E-lover 异地恋感情社区") %></title>
-  <%= stylesheet_link_tag 'core' %>
-  <%= yield(:head) %>
+	<%= stylesheet_link_tag 'core' %>
+	<%= yield(:head) %>
 
 </head>
 <body>
 	<div id="wrapper">
 		<div id="header">
-		
+			<div id="globallink_wrapper">
+				<%= render :partial => 'shared/globallink' %>
+			</div>
 		</div>
 		<div id="body">
 			<%= yield%>
