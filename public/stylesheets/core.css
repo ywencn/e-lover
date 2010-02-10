@@ -6,17 +6,20 @@ body{
 	
 }
 #wrapper{
-	width: 1002px;
-	min-height: 500px;
-	margin: 0px auto; 
-	
-	text-align: left;
+	text-align: center; 
 }
 #header{
-	 background:url("/images/public/bg0.png") no-repeat;
-	 height: 112px;
+	background:url("/images/public/bg0.png") no-repeat top center;
+	height: 112px;
 }
 #body{
-	margin-top: 10px; 
+	margin: 10px auto 0px auto; 
+	width: 1002px;min-height: 490px;
 	background-color:  #ffffff;
+	text-align: left;
+	background-image: url(/images/public/design_bg0.png);
+}
+#footer{
+	width: 100%;height: 30px;
+	background:url("/images/public/footer0.png") repeat-x;
 }
