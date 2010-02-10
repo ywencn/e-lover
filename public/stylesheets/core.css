@@ -10,6 +10,10 @@ visibility:hidden;
 .clearfix { 
 display:inline-block; 
 } 
+/* Hide from IE Mac \*/ 
+.clearfix {display:block;} 
+/* End hide from IE Mac */ 
+/* end of clearfix */ 
 
 body{
 	width: 100%;
@@ -40,20 +44,30 @@ body{
 #globallink{
 	 position: absolute;
 	 top: 10px;left:400px;
+	 font-family: 黑体;
 }
 #globallink ul{
 	 
 }
 #globallink ul li{
-	width: 66px;height: 26px; 
-	display: block;
 	float: left;
-	background:url(/images/public/globallink_bg.png) no-repeat;
 	font-size: 13px;
-	padding-top: 3px;
 	text-align: center;
+	text-indent: -3px;
+	margin-left: 3px;
 }
-
+#globallink ul li a:link,#globallink ul li a:visited{
+	 background:url(/images/public/globallink_button_bg_link.png) no-repeat;
+	 display: block;
+	 width: 65px;height: 20px;
+	 padding-top: 5px;
+}
+#globallink ul li a:hover{
+	 background:url(/images/public/globallink_button_bg_hover.png) no-repeat;
+	 color: #ffffff;
+	 text-decoration: none;
+	 cursor: pointer;
+}
 
 
 

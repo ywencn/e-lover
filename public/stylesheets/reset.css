@@ -28,3 +28,26 @@ q:before,q:after {
 }
 abbr,acronym { border:0;
 }
+a{
+	text-decoration: none; 
+}
+a:link,a:visited,a:hover{
+	color: #000000; 
+}
+a:hover{
+	text-decoration: underline; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
