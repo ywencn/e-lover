@@ -37,7 +37,9 @@ a:link,a:visited,a:hover{
 a:hover{
 	text-decoration: underline; 
 }
-
+textarea{
+	height: 80px; 
+}
 
 
 

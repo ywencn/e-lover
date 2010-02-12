@@ -2,8 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-	<title><%= h(yield(:title) || "E-lover 异地恋感情社区") %></title>
+	<title><%= h(yield(:title) || "E-lover") %></title>
 	<%= stylesheet_link_tag 'core' %>
+	<%= javascript_include_tag 'jquery-1.4.1.min' %>
 	<%= yield(:head) %>
 
 </head>

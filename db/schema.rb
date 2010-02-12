@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100210061834) do
+ActiveRecord::Schema.define(:version => 20100211153216) do
+
+  create_table "states", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "states", ["user_id"], :name => "index_states_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "username"
@@ -17,8 +26,14 @@ ActiveRecord::Schema.define(:version => 20100210061834) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
+    t.integer  "login_count"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "avatar"
   end
 
 end

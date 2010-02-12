@@ -1,19 +1,22 @@
-<%= stylesheet 'home'%>
+<%= stylesheet 'states','home'%>
+<%= javascript 'jquery/jquery.corner','home'%>
 <div id="home" class="clearfix">
 	
 	<div id="side">
 		<div id="sub_link">
-			<ul>
-				<li>状态</li>
-				<li>日志</li>
-				<li>相册</li>
-				<li>留言板</li>
-			</ul>
+			<%= render :partial => 'sub_link' %>
 		</div>
 	</div>
 	
-	<div id="main">
-		
+	<div id="main" class="clearfix">
+		<div id="home-body">
+			<div id="state_box">
+				<%= render :partial => 'state_panel' %>
+			</div>
+		</div>
+		<div id="home-side">
+			asd
+		</div>
 	</div>
 	
 </div>
