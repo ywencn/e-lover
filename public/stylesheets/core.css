@@ -20,6 +20,7 @@ body{
 	text-align: center; 
 	background: #f1f1f1 url("/images/public/bg1.png") repeat-x;
 	font-size: 12px;
+	font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;
 	
 }
 #wrapper{
@@ -37,6 +38,7 @@ body{
 /*	background-image: url(/images/public/design_bg0.png); */
 }
 #footer{
+	margin-top: 10px;
 	width: 100%;height: 30px;
 	background:url("/images/public/footer0.png") repeat-x;
 }
@@ -93,6 +95,7 @@ body{
 /* paginate BEGIN*/
 /*分页*/
 .digg_pagination {
+	font-size: 12px;
   background: white;
   margin: 10px 0px 0px 10px;
   /* self-clearing method: */ }
@@ -138,7 +141,9 @@ body{
   *:first-child+html .digg_pagination {
     overflow: hidden; }
 /* paginate END */
-
+a.username_link{
+	color: #29830a; 
+}
 
 
 

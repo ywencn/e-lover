@@ -25,7 +25,11 @@ module ApplicationHelper
 # define my date formate
   def standard_date(date)
      date.strftime("%Y-%m-%d %H:%M:%S")
-  end    
+  end
+  
+  def standard_date_m(date)
+     date.strftime("%Y-%m-%d %H:%M")
+  end   
   
   def error_messages_for(object_name, options = {})
     options = options.symbolize_keys
@@ -34,6 +38,7 @@ module ApplicationHelper
       error_lis = []
       object.errors.each{ |key, msg| error_lis << content_tag("li", msg) }
       content_tag("div", content_tag(options[:header_tag] || "h2", "发生#{object.errors.count}个错误" ) + content_tag("ul", error_lis), "id" => options[:id] || "errorExplanation", "class" => options[:class] || "errorExplanation" )
+  
     end
   end
   
@@ -46,6 +51,13 @@ module ApplicationHelper
   end
   #user name link ,to users/show or profile
   def username_link(user)
-    link_to user.username ,user_path(user)
+    link_to h(user.username) ,user_path(user) ,:class=>"username_link"
+  end
+  
+  def passed_time(datetime)
+    case datetime
+    when 1
+      1
+    end
   end
 end

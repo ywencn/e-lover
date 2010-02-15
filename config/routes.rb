@@ -1,11 +1,17 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :states
+  map.resources :states do |state|
+    state.resources :comments
+  end
+  map.resources :comments
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   map.resources :users, :member => { :avatar => :get },
                         :collection=>{:upload_avatar=>:post} do |users|
-    users.resources :states
+    users.resources :states do |state|
+    end
   end
+  
                         
   map.signup 'signup', :controller => 'users', :action => 'new'
   map.login 'login', :controller => 'user_sessions', :action => 'new'  
