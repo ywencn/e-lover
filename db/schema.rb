@@ -9,13 +9,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100214021252) do
+ActiveRecord::Schema.define(:version => 20100215170222) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
     t.integer  "item_id"
     t.string   "item_type"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "connections", :force => true do |t|
+    t.integer  "be_followed_id"
+    t.integer  "follower_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

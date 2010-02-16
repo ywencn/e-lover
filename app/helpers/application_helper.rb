@@ -41,7 +41,7 @@ module ApplicationHelper
   
     end
   end
-  
+  #头像显示
   def avatar(user,size="100_100")
     if user.avatar
      image_tag("/files/avatar/#{size}/#{user.id}.jpg")
@@ -60,4 +60,16 @@ module ApplicationHelper
       1
     end
   end
+  
+  def follow_button(user)
+    if user.followers.include? current_user
+      "关注中"
+      link_to'取消',connection_path(user.id),
+                   :method => :delete,
+                   :confirm => "确定取消关注 #{user.username} 么？" 
+    else
+      button_to '关注Ta',{:controller=>"connections",:be_followed_id=>user.id},:method=>"post"
+    end
+  end
+  
 end

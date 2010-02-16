@@ -15,7 +15,12 @@
 			</div>
 		</div>
 		<div id="home-side">
-			asd
+			<div id="friends">
+				<% for user in @user.followed_users%>
+				<%= avatar(user,"64_64")%>
+				<%= user.username%>
+				<% end %>
+			</div>
 		</div>
 	</div>
 	

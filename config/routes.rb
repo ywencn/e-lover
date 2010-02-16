@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :connections
+
   map.resources :states do |state|
     state.resources :comments
   end
