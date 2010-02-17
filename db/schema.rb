@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100215170222) do
+ActiveRecord::Schema.define(:version => 20100216153417) do
+
+  create_table "activities", :force => true do |t|
+    t.boolean  "public"
+    t.integer  "item_id"
+    t.string   "item_type"
+    t.integer  "user_id"
+    t.string   "preview"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -23,6 +33,13 @@ ActiveRecord::Schema.define(:version => 20100215170222) do
   create_table "connections", :force => true do |t|
     t.integer  "be_followed_id"
     t.integer  "follower_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "feeds", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "activity_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

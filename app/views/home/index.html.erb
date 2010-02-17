@@ -13,12 +13,25 @@
 			<div id="state_box">
 				<%= render :partial => 'state_panel' %>
 			</div>
+			<div id="feeds">
+				<% for feed in @feeds %>
+					<%= feed.user_id%>
+				<% end -%>
+			</div>
 		</div>
 		<div id="home-side">
 			<div id="friends">
 				<% for user in @user.followed_users%>
-				<%= avatar(user,"64_64")%>
-				<%= user.username%>
+				<div class="friends">
+					<div class="avatar">
+						<%= avatar(user,"50_50")%>
+					</div>
+					<div class="username">
+						<%= user.username%>
+					</div>
+				</div>
+				
+				
 				<% end %>
 			</div>
 		</div>
