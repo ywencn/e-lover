@@ -1,4 +1,5 @@
 @import url("reset.css");
+@import url("globallink.css");
 /* Clear Fix */ 
 .clearfix:after { 
 content:"."; 
@@ -18,7 +19,7 @@ display:inline-block;
 body{
 	width: 100%;
 	text-align: center; 
-	background: #f1f1f1 url("/images/public/bg1.png") repeat-x;
+	background: #f1f1f1 url("/images/public/bg3.png") repeat-x;
 	font-size: 12px;
 	font-family: Tahoma,Verdana,STHeiTi,simsun,sans-serif;
 	
@@ -27,20 +28,27 @@ body{
 	text-align: center; 
 }
 #header{
-	background:url("/images/public/bg0.png") no-repeat top center;
-	height: 112px;
+/*	background:url("/images/public/bg0.png") no-repeat top center; */
+	height: 90px;
+	position: relative;
+	text-align: center;
+	
 }
 #body{
-	margin: 8px auto 0px auto; 
-	width: 1002px;min-height: 490px;
+	margin: 0px auto; 
+	width: 1012px;min-height: 490px;
+	padding:0px 5px;
 	background-color:  #ffffff;
 	text-align: left;
-/*	background-image: url(/images/public/design_bg0.png); */
+	padding-top: 6px;
+	border-top: 1px solid;
+	border-color: #81af1d; 
 }
 #footer{
 	margin-top: 10px;
 	width: 100%;height: 30px;
 	background:url("/images/public/footer0.png") repeat-x;
+	padding-top:8px ;
 }
 
 /* ERROR MESSAGE */
@@ -63,34 +71,6 @@ body{
 }
 /* END -- ERROR MESSAGE */
 
-/*-- Globallink --*/
-#globallink{
-	 position: absolute;
-	 top: 10px;left:400px;
-	 font-family: 黑体;
-}
-#globallink ul{
-	 
-}
-#globallink ul li{
-	float: left;
-	font-size: 13px;
-	text-align: center;
-	text-indent: -3px;
-	margin-left: 3px;
-}
-#globallink ul li a:link,#globallink ul li a:visited{
-	 background:url(/images/public/globallink_button_bg_link.png) no-repeat;
-	 display: block;
-	 width: 65px;height: 20px;
-	 padding-top: 5px;
-}
-#globallink ul li a:hover{
-	 background:url(/images/public/globallink_button_bg_hover.png) no-repeat;
-	 color: #ffffff;
-	 text-decoration: none;
-	 cursor: pointer;
-}
 
 /* paginate BEGIN*/
 /*分页*/
@@ -145,9 +125,47 @@ a.username_link{
 	color: #29830a; 
 }
 
+/*copyright */
+#copyright{
 
+}
 
+/* comments */
+.new_comment{
+	clear: both; 
+}
+.new_comment textarea{
+	width: 350px;height: 40px; 
+	margin-right: 8px;
+}
+.new_comment input{
+	width: 40px;height: 40px; 
+	float:right;
+}
+.comment{
+	clear: both;
+	margin-top: 5px;
+}
+.comment .avatar{
+	float: left; 
+}
+.comment .body{
+	float: left;
+	padding: 3px;
+	margin-left: 5px;
+}
 
+.comment .list_body{
+	float: left;
+}
+.comment li{
+	 font-size	: 12px;
+	background-color: #e5ffc1; 
+	margin-left:50px ;
+	width:500px;
+	padding: 5px;	
+	margin-top: 5px;
+}
 
 
 

@@ -13,27 +13,33 @@
 			<div id="state_box">
 				<%= render :partial => 'state_panel' %>
 			</div>
-			<div id="feeds">
-				<% for feed in @feeds %>
-					<%= feed.user_id%>
-				<% end -%>
+			<div id="feeds_wrapper">
+				<%= render :partial => 'feed' %>
 			</div>
 		</div>
 		<div id="home-side">
-			<div id="friends">
-				<% for user in @user.followed_users%>
-				<div class="friends">
-					<div class="avatar">
+			<div id="my_followers" class="clearfix friends">
+				<h3>关注我的人:</h3>	
+					<ul>
+						<% for user in @followers%>
+						<li>
+							<%= avatar(user,"50_50")%>
+							<%= user.username%>
+						</li>
+						<% end %>
+					</ul>
+			</div><!--end friends-->
+			<div id="my_followed_users" class="clearfix friends">
+				<h3>我关注的人:</h3>	
+				<ul>
+					<% for user in @followed_users%>
+					<li>
 						<%= avatar(user,"50_50")%>
-					</div>
-					<div class="username">
 						<%= user.username%>
-					</div>
-				</div>
-				
-				
-				<% end %>
-			</div>
+					</li>
+					<% end %>
+				</ul>
+			</div><!--end friends-->
 		</div>
 	</div>
 	

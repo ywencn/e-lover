@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100216153417) do
+ActiveRecord::Schema.define(:version => 20100221035019) do
 
   create_table "activities", :force => true do |t|
     t.boolean  "public"
@@ -44,6 +44,34 @@ ActiveRecord::Schema.define(:version => 20100216153417) do
     t.datetime "updated_at"
   end
 
+  create_table "groups", :force => true do |t|
+    t.string   "name"
+    t.string   "introduction"
+    t.integer  "admin_id"
+    t.integer  "posts_count",  :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups_users", :id => false, :force => true do |t|
+    t.integer "group_id"
+    t.integer "user_id"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.integer  "comments_count",      :default => 0
+    t.integer  "user_id"
+    t.integer  "last_replid_user_id"
+    t.datetime "last_replid_time"
+    t.boolean  "publish_to_blog"
+    t.integer  "group_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "read_count",          :default => 0
+  end
+
   create_table "states", :force => true do |t|
     t.integer  "user_id"
     t.string   "body"
@@ -53,6 +81,14 @@ ActiveRecord::Schema.define(:version => 20100216153417) do
   end
 
   add_index "states", ["user_id"], :name => "index_states_on_user_id"
+
+  create_table "tracks", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "item_type"
+    t.integer  "item_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"
