@@ -1,0 +1,25 @@
+<% title "States" %>
+<%= stylesheet 'states'%>
+<%= javascript 'states'%>
+<div id="states" class="clearfix">
+	<div id="states_side">
+	</div>
+	<div id="states_body">
+		<div id="state_box">
+			<%= render :partial => '/home/state_panel' %>
+		</div>
+		<div id="states_list">
+			<div id="states_list_header">
+				以下是您发布过的状态：
+			</div>
+			<ul>
+					<%= render :partial => 'state_list',:collection=>@states,:as=>:state %>
+
+			</ul>
+		<div class="digg_pagination"><%= will_paginate%></div>
+		</div><!-- END sates_list -->
+	</div>
+	<div id="states_ad">
+	</div>
+</div>
+

@@ -1,0 +1,117 @@
+#states{
+	
+}
+#states_side{
+	float: left; 
+	width: 160px;min-height: 500px;
+	background-color: red;
+}
+#states_body{
+	float: left; 
+	margin-left: 15px;
+	width: 600px;min-height: 500px;
+}
+#states_ad{
+	float: left; 
+	margin-left: 15px;
+	width: 210px;min-height: 500px;
+	background-color: green;
+}
+
+/* state box BEGIN*/
+#state_box #state_panel_wrapper{
+	
+	background-color: #ff7c10;
+}
+#state_box #state_panel{
+	height: 98px;
+	background-color: #efffb2;
+	border: 1px solid #cccccc;
+	position: relative;
+}
+#state_box #avatar_wrapper{
+	 float: left;
+	 width: 100px;height: 98px;
+}
+#state_box #state_wrapper{
+	 float: left;
+	 
+}
+#state_box #avatar{
+	width:70px;height: 70px;
+	border: 1px solid #cccccc;
+	margin: 20px auto 0px auto;
+	text-align: center;
+}
+#state_box #avatar_box{
+	float: left; 
+}
+#state_box #avatar img{
+	margin: 3px; 
+}
+#state_box #latest_state{
+	font-size: 14px;
+	font-family: 黑体; 
+	width: 440px;
+	margin-top: 5px;
+}
+#state_box #state_input{
+	margin-top:5px ;
+	height: 50px;
+}
+#state_box #state_input #state_body{
+	width:410px;height: 30px;
+	padding:3px;
+	float: left;
+}
+#state_box #state_input #state_submit{
+	width: 50px;height: 30px; 
+	margin-left: 10px;
+	float: left;
+}
+/* state box END*/
+#states_list{
+	font-size: 14px; 
+}
+#states_list_header{
+	margin-top:10px ;
+	height: 20px;
+	padding: 3px 20px 0px 20px;
+	background: #CFF40D url(/images/states/states_list_header_bg.png) repeat-x;
+	border-top: 1px solid #8CC322;
+}
+#states_list li.state{
+	position: relative;
+	border-bottom: 1px solid #CFF40D;
+	padding: 10px 0px;
+}
+#states_list .state_show{
+	width: 500px; 
+}
+#states_list .avatar{
+	float: left; 
+}
+#states_list .body{
+	float: left;
+	padding: 3px;
+	margin-left: 5px;
+}
+#states_list .time{
+	margin-top: 10px; 
+	color: #7f7f7f;
+	font-size: 12px;
+}
+#states_list .del{
+	position: absolute;
+	top: 5px;right: 10px;
+	background: transparent url(/images/icon/icon.png) no-repeat scroll -63px -420px; 
+	width: 15px;height: 15px;
+}
+#states_list .del:hover{
+	cursor: pointer;
+	background-position: -63px -434px;
+	text-decoration: none; 
+}
+
+
+

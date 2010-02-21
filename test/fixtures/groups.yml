@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  introduction: MyString
+  admin_id: 1
+
+two:
+  name: MyString
+  introduction: MyString
+  admin_id: 1

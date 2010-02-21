@@ -1,0 +1,16 @@
+<% title "State" %>
+
+<p>
+  <strong>User:</strong>
+  <%=h @state.user_id %>
+</p>
+<p>
+  <strong>Body:</strong>
+  <%=h @state.body %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_state_path(@state) %> |
+  <%= link_to "Destroy", @state, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", states_path %>
+</p>

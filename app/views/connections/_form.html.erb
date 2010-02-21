@@ -1,0 +1,12 @@
+<% form_for @connection do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :be_followed_id %><br />
+    <%= f.text_field :be_followed_id %>
+  </p>
+  <p>
+    <%= f.label :follower_id %><br />
+    <%= f.text_field :follower_id %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

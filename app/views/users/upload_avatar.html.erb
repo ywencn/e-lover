@@ -1,0 +1,22 @@
+
+<div id="name">
+	<%=show_avatar(current_user)%>
+	200_200<br>
+	<%= image_tag("/files/avatar/200_200/#{current_user.id}.jpg")%>
+</div><br>
+<div id="name">
+	100_100<br>
+	<%= image_tag("/files/avatar/100_100/#{current_user.id}.jpg",:id=>"avatar")%>
+</div><br>
+<div id="name">
+	64_64<br>
+	<%= image_tag("/files/avatar/64_64/#{current_user.id}.jpg",:id=>"avatar")%>
+</div><br>
+<div id="name">
+	50_50<br>
+	<%= image_tag("/files/avatar/50_50/#{current_user.id}.jpg",:id=>"avatar")%>
+</div>
+<div id="name">
+	40_40<br>
+	<%= image_tag("/files/avatar/40_40/#{current_user.id}.jpg",:id=>"avatar")%>
+</div>

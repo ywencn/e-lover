@@ -1,0 +1,37 @@
+<% title "Post" %>
+<%= stylesheet 'blog'%>
+<div id="post_show" class="clearfix">
+	<div id="post_show_main">
+		<div id="post_title">
+			<%=h @post.title %>
+		</div>
+		<div id="post_info">
+			发表于<%= standard_date(@post.created_at)%>
+		</div>
+		<div id="post_body">
+			<%= @post.body %>
+		</div>
+		<%= render :partial => 'comment' %>
+	</div>
+	<div id="post_show_side">
+		<div id="recent_reader" class="clearfix">
+			<h3>最近看过这篇的日志的人:</h3>
+			<ul>
+				<% if current_user != @post.user %>
+						<li><%= avatar(current_user,"50_50")%><%= username_link(current_user)%></li>
+				<% end %>	
+				<% for track in @post.tracks.all(:limit => 8) %>
+					<% unless track.user_id == current_user.id %>
+						<li><%= avatar(track.user,"50_50")%><%= username_link(track.user)%></li>
+					<% end -%>
+				<% end -%>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+  <%= link_to "Edit", edit_post_path(@post) %> |
+  <%= link_to "Destroy", @post, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", posts_path %>
+</p>

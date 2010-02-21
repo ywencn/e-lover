@@ -1,0 +1,19 @@
+<div id="state_panel" class="clearfix">
+	<div id="avatar_wrapper">
+		<div id="avatar"><%= avatar(@user,"64_64")%></div>
+	</div>
+	
+	<div id="state_wrapper">
+		<div id="latest_state">
+			<%= current_user.username%>:
+			<%= current_user.states.size>0 ? truncate(current_user.states.last.body,25) : "您还没发布过状态。" %>
+		</div>
+		<div id="state_input">
+			<% form_for @state do |f| -%>
+				<%= f.text_area :body %>
+				<%= f.submit "发布", :disable_with => '发布ing...' %>
+			<% end -%>
+		</div>
+		<div id="state_num_wrapper"><span id="state_num">0</span>/240</div>
+	</div>
+</div>

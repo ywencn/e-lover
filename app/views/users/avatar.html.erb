@@ -1,0 +1,67 @@
+<%= javascript('jquery/jquery.imgareaselect.min','avatar')%>
+<%= stylesheet('jquery-plugin/imgareaselect-default','signup')%>
+<div id="avatar_wrapper">
+	<h1>上 传 头 像</h1>
+	<div id="avatar_select">
+		<div id="avatar_notice">
+			拖动鼠标，选择合适范围后保存.
+		</div>
+		<% if current_user.avatar %>
+		<%= image_tag("/files/avatar/200_200/#{current_user.id}.jpg",:id=>"avatar")%>
+		<%else%>
+		<%= image_tag("/files/avatar/200_200/0.jpg",:id=>"avatar")%>
+		<%end%>
+	</div>
+	<div id="avatar_side">
+		<div id="preview_wrapper">
+			<p style="font-size: 110%; font-weight: bold; padding-left: 0.1em;">
+			 头像预览:
+			 </p>
+			 <div class="frame"  style="margin: 0 1em; width: 100px; height: 100px;">
+			  <div id="preview" style="width: 100px; height: 100px; overflow: hidden;">
+			   	<% if current_user.avatar %>
+					<%= image_tag("/files/avatar/200_200/#{current_user.id}.jpg",:id=>"preview_img")%>
+					<%else%>
+					<%= image_tag("/files/avatar/200_200/0.jpg",:id=>"preview_img")%>
+					<%end%>
+			  </div>
+			 </div>
+		</div>
+		
+		<% form_tag({ :action=>"upload_avatar"},:method=>"post", :multipart => true) do %>
+		<input id="x1" type="hidden" value="0" name="x1"/>  
+		<input id="y1" type="hidden" value="0" name="y1"/>  
+		<input id="x2" type="hidden" value="150" name="x2"/>  
+		<input id="y2" type="hidden" value="150" name="y2"/>
+		<div id="upload">
+			<p style="font-size: 110%; font-weight: bold; padding-left: 0.1em;">
+			 头像上传:
+			 </p>
+			<%=file_field_tag('photo')%>
+			<%= submit_tag("上传照片")%>
+		</div>
+		<div id="save">
+			<p style="font-size: 110%; font-weight: bold; padding-left: 0.1em;">
+			保存头像:
+			 </p>
+			<%= submit_tag("保存设置",:id=>"save_buttom")%>
+		</div>
+		<% end %>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

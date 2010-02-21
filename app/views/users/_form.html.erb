@@ -1,0 +1,41 @@
+<% form_for @user do |form| %>  
+		<%= form.error_messages %>  
+			<table id="signup_table">
+				<tr class="head">
+					<td>
+						<%= @user.new_record? ? "注册新用户:" : "修改个人资料:"%>
+					</td>
+				</tr>
+				<tr>
+					<td><%= form.label :email, "E-mail:" %></td>
+				</tr>
+				<tr class="input">
+					<td><%= form.text_field :email,:class=>"text_field" %></td>
+				</tr>
+				<tr>
+					<td><%= form.label :username, "姓名:" %></td>
+				</tr>
+				<tr class="input">
+					<td><%= form.text_field :username,:class=>"text_field" %></td>
+				</tr>
+
+				<tr>
+					<td><%= form.label :password, "密码:" %></td>
+				</tr>
+				<tr class="input">
+					<td><%= form.password_field :password ,:class=>"text_field"%></td>
+				</tr>
+
+				<tr>
+					<td><%= form.label :password_confirmation, "重复密码:" %></td>
+				</tr>
+				<tr class="input">
+					<td><%= form.password_field :password_confirmation,:class=>"text_field" %></td>
+				</tr>
+				<tr >
+					<td style="text-align:center;height:50px;">
+						<%= image_submit_tag("/images/users/signup_button.png", :disabled => false,:id=>"signup_button") %>
+					</td>
+				</tr>
+			</table>
+		<% end %>

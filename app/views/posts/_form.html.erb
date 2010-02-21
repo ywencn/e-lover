@@ -1,0 +1,22 @@
+<% form_for @post do |f| %>
+  <%= f.error_messages %>
+<table id="post_table" cells-padding="3">
+	<tr>
+		<td>标题:</td><td><%= f.text_field :title %></td>
+	</tr>
+	<tr>
+		<td>blog:</td><td><%= f.check_box :publish_to_blog %></td>
+	</tr>
+	<tr>
+		<td>正文:</td>
+		<td>
+			<input type="hidden" id="content1" name="post[body]" value="<%=h @post.body %>">      
+	    <iframe id="myEditor" src="/editor/editor.htm?id=content1" frameborder="0" scrolling="no" width="630" height="470"></iframe>
+		</td>
+	</tr>
+	
+	<tr>
+	 <td></td><td style="text-align:center"><%= f.submit "提交" %></td>
+	</tr>
+</table>
+<% end %>

@@ -1,0 +1,44 @@
+<% title "Group" %>
+<%= stylesheet 'group'%>
+<div id="group">
+	<div id="group_title">
+		<h2>小组:<%= @group.name%></h2>
+	</div>
+	<div id="group_body" class="clearfix">
+		<div id="group_main">
+			group_main
+		</div>
+		<div id="group_side">
+			<div id="user_list" class="clearfix">
+				<h3>小组成员:</h3>
+				<ul>
+					<% for user in @group.users%>
+					<li><%= avatar(user,"50_50")%>
+							<%= username_link(user)%>
+					</li>
+					<%end -%>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<p>
+  <strong>Name:</strong>
+  <%=h @group.name %>
+</p>
+<p>
+  <strong>Introduction:</strong>
+  <%=h @group.introduction %>
+</p>
+<p>
+  <strong>Admin:</strong>
+  <%=h @group.admin.username %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_group_path(@group) %> |
+  <%= link_to "Destroy", @group, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", groups_path %>
+</p>

@@ -1,0 +1,16 @@
+<% title "Connection" %>
+
+<p>
+  <strong>Be Followed:</strong>
+  <%=h @connection.be_followed_id %>
+</p>
+<p>
+  <strong>Follower:</strong>
+  <%=h @connection.follower_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_connection_path(@connection) %> |
+  <%= link_to "Destroy", @connection, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", connections_path %>
+</p>

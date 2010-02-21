@@ -1,0 +1,70 @@
+/*-- Globallink --*/
+#globallink_wrapper{
+
+}
+#globallink{
+	 width: 100%;
+	 position: relative;
+	 z-index: 1;
+	 text-align: center;
+	 
+}
+#globallink ul{
+	 margin: 0px auto;
+	text-align: center;
+	background-color: red;
+	width: 500px;
+	
+}
+#globallink ul li{
+	float: left;
+	font-size: 13px;
+	text-align: center;
+	text-indent: -999999px;
+	margin-left: 3px;
+	margin-top: 3px;
+}
+/*
+#globallink ul li a:link,#globallink ul li a:visited{
+	 background:url(/images/public/globallink_button_bg_link.png) no-repeat;
+	 display: block;
+	 width: 65px;height: 20px;
+	 padding-top: 5px;
+}
+#globallink ul li a:hover{
+	 background:url(/images/public/globallink_button_bg_hover.png) no-repeat;
+	 color: #ffffff;
+	 text-decoration: none;
+	 cursor: pointer;
+}
+*/
+#globallink ul li a{
+	 display: block;
+	 cursor: pointer;
+}
+#globallink ul li#nav_home a{
+	 width: 88px;height: 38px;
+	 background:url(/images/button/nav_bg_home_88x38.png) no-repeat;
+}
+#globallink ul li#nav_group a{
+	 width: 88px;height: 42px;
+	 background:url(/images/button/nav_bg_group_88x42.png) no-repeat;
+}
+#globallink ul li#nav_profile a{
+	 width: 88px;height: 42px;
+	 background:url(/images/button/nav_bg_profile_88x38.png) no-repeat;
+}
+#globallink ul li#nav_friend a{
+	 width: 88px;height: 40px;
+	 background:url(/images/button/nav_bg_friend_88x40.png) no-repeat;
+}
+#globallink ul li#nav_message a{
+	 width: 88px;height: 38px;
+	 background:url(/images/button/nav_bg_message_88x38.png) no-repeat;
+}
+#user_nav{
+	position: absolute;
+	z-index: 10;
+	float:right;
+	top: 5px;right: 20px;	 
+}

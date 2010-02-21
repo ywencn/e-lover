@@ -1,0 +1,45 @@
+<li class="state clearfix">
+	<div class="state_show">
+		<div class="avatar">
+			<%= avatar(state.user,"50_50")%>
+		</div>
+		<div class="body">
+			<div class="content">
+				<%= username_link(state.user)%> :<%=h state.body %>
+			</div>
+			<div class="time">
+				<%=h standard_date_m(state.created_at) %> <%= state.comments_count%>条回复
+			</div>
+		</div><!--END .body-->
+		<%= link_to '&nbsp;&nbsp;&nbsp;&nbsp;', user_state_path(@user,state), :confirm => 'Are you sure?',:class=>"del", :method => :delete %>
+	</div>
+	<div class="comment clearfix">
+		<ul>
+		<% for comment in state.comments%>
+			<li class="clearfix">
+				<div class="avatar">
+					<%= avatar(comment.user,"40_40")%>
+				</div>
+				<div class="body">
+					<%= username_link(comment.user) %> :
+					<%=h comment.body%>
+				</div>
+
+			</li>
+		<% end -%>
+		 <li>
+		 	<div class="new_comment clearfix">
+				<div class="avatar">
+					<%= avatar(current_user,"40_40")%>
+				</div>
+				<div class="body">
+					<% form_for @comment ,:url=>state_comments_path(state) do |f|%>
+						<%= f.text_area :body %>
+						<%= f.submit "回复", :disable_with => 'Submiting...' %>
+					<% end -%>
+				</div>
+			</div>
+		 </li>
+		</ul>
+	</div>
+</li>

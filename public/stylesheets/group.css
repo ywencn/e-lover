@@ -1,0 +1,35 @@
+#group{
+	 
+}
+#group_title{
+	 background-color: yellow;
+	 width:1000px；
+}
+#group_body{
+	 
+}
+#group_main{
+	float: left;
+	width: 700px;
+	background-color: red; 
+}
+#group_side{
+	 float: left;
+	 margin-left: 15px;
+	 width: 295px;
+}
+#group #user_list{
+	 border: 1px solid #e3ff95;
+	 width: 295px;
+}
+#group #user_list h3{
+	background-color: #d2ff9f; 
+	padding: 3px;
+	font-size: 16px;
+}
+#group #user_list li{
+	float: left; 
+	text-align: center;
+	width: 50px;
+	margin: 3px;
+}

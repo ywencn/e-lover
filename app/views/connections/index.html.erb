@@ -1,0 +1,19 @@
+<% title "Connections" %>
+
+<table>
+  <tr>
+    <th>Be Followed</th>
+    <th>Follower</th>
+  </tr>
+  <% for connection in @connections %>
+    <tr>
+      <td><%=h connection.be_followed_id %></td>
+      <td><%=h connection.follower_id %></td>
+      <td><%= link_to "Show", connection %></td>
+      <td><%= link_to "Edit", edit_connection_path(connection) %></td>
+      <td><%= link_to "Destroy", connection, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Connection", new_connection_path %></p>

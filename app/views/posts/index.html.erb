@@ -1,0 +1,41 @@
+<% title "日志" %>
+<%= stylesheet 'blog'%>
+<div id="blog">
+	<div id="blog_header">
+		<h2>日志</h2> 
+		<div id="new_post_link">
+			<%= link_to "写新日志", new_user_post_path(current_user) %>
+		</div>
+	</div>
+	<div id="blog_body" class="clearfix">
+		<div id="blog_main">
+			<% for post in @posts %>
+				<div class="post_list">
+					<div class="post_list_title">
+						<span class="title"><%= link_to h(post.title),user_post_path(@user,post)%></span>
+						<div class="post_control">
+							<%= link_to "编辑", edit_post_path(post) %>
+							<%= link_to "删除", post, :confirm => 'Are you sure?', :method => :delete %>
+						</div>
+					</div>
+						<%#=h truncate(strip_tags(post.body ).split(//).to_s,400) %>
+						<div class="preview">
+							<%=h truncate(strip_tags(post.body ).to_s,200) %>
+						</div>
+						<div class="info">
+							<div class="count">
+								阅读:<%= post.read_count%> | 评论:<%= post.comments_count%>
+								<div class="time">
+									<%= standard_date(post.created_at)%>
+								</div>
+							</div>
+						</div>
+				</div>
+			<% end -%>
+		</div>
+		<div id="blog_side">
+			blog_side
+		</div>
+	</div>
+</div>
+<div class="digg_pagination"><%= will_paginate%></div>

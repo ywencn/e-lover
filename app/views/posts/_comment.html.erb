@@ -1,0 +1,29 @@
+<div class="comment clearfix">
+	<ul>
+	<% for comment in @post.comments%>
+		<li class="clearfix">
+			<div class="avatar">
+				<%= avatar(comment.user,"40_40")%>
+			</div>
+			<div class="body">
+				<%= username_link(comment.user) %> :
+				<%=h comment.body%>
+			</div>
+
+		</li>
+	<% end -%>
+	 <li>
+	 	<div class="new_comment clearfix">
+			<div class="avatar">
+				<%= avatar(current_user,"40_40")%>
+			</div>
+			<div class="body">
+				<% form_for @comment ,:url=>post_comments_path(@post) do |f|%>
+					<%= f.text_area :body %>
+					<%= f.submit "回复", :disable_with => 'Submiting...' %>
+				<% end -%>
+			</div>
+		</div>
+	 </li>
+	</ul>
+</div>

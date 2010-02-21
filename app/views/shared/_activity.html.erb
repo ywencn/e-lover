@@ -1,0 +1,11 @@
+<div class="activity clearfix">
+	<% unless feed.activity.nil? %>
+		<div class="activity_avatar">
+			<%= avatar(feed.activity.user,"50_50") %>
+		</div>
+		<div class="activity_message">
+			<%= feed_message(feed.activity) %>
+		</div>
+	<% end %>
+</div>
+	

@@ -1,0 +1,13 @@
+<div id="globallink">
+	<ul>
+		
+<!--<li id="nav_home"><%= link_to image_tag("button/nav_bg_home.png"), root_url %></li>-->		
+		<li id="nav_home"><%= link_to '首页',root_url%></li>
+		<li id="nav_profile"><%= link_to '个人主页',profile_path(current_user)%></li>
+		<li id="nav_group"><%= link_to '小组',groups_path%></li>
+		<li id="nav_friend"><%= link_to '好友',users_path %></li>
+		<li id="nav_message"><%= link_to '站内信',root_url %></li>
+		<li><%#= link_to '浏览用户',users_path %></li>
+		<li><%#= link_to '设 置',root_url %></li>
+	</ul>
+</div>

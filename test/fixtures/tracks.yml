@@ -1,0 +1,9 @@
+one:
+  user_id: 1
+  item_type: MyString
+  item_id: 1
+
+two:
+  user_id: 1
+  item_type: MyString
+  item_id: 1

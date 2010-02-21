@@ -1,0 +1,30 @@
+/* users/new */
+#signup{
+	 
+}
+#signup_table{
+	margin-top: 10px;
+	border: 1px solid #0d63fd; 
+	width: 600px;
+	}
+#signup_table tr.head td{
+	height: 30px;
+	background: #0d63fd url(/images/public/blue_title_bg0.png); 
+	color:#ffffff;
+	font: 14px 黑体;
+}
+#signup_table td{
+	padding-left: 10px; 
+	height: 25px;
+}
+#signup_table tr.input td{
+	
+}
+#signup_table .text_field{
+	width: 200px;height: 25px; 
+	font-size: 20px;
+	font-weight: bold; 
+}
+#signup_button{
+	margin: 10px auto 10px auto;
+}

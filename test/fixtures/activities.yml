@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: activities
+#
+#  id         :integer(4)      not null, primary key
+#  public     :boolean(1)
+#  item_id    :integer(4)
+#  item_type  :string(255)
+#  user_id    :integer(4)
+#  preview    :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+one:
+  public: false
+  item_id: 1
+  item_type: MyString
+  user_id: 1
+  preview: MyString
+
+two:
+  public: false
+  item_id: 1
+  item_type: MyString
+  user_id: 1
+  preview: MyString

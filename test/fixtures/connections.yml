@@ -1,0 +1,18 @@
+# == Schema Information
+#
+# Table name: connections
+#
+#  id             :integer(4)      not null, primary key
+#  be_followed_id :integer(4)
+#  follower_id    :integer(4)
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+
+one:
+  be_followed_id: 1
+  follower_id: 1
+
+two:
+  be_followed_id: 1
+  follower_id: 1

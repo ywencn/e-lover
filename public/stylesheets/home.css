@@ -1,0 +1,114 @@
+#home{
+
+}
+#home #side{
+	width: 160px;min-height: 300px; 
+/*	border: 1px solid #000000; */
+	float: left;
+}
+#home #main{
+	width: 839px;min-height: 300px;
+	margin-left: 13px;
+/*	border: 1px solid #000000; */
+	float: left;
+
+}
+#home #home-body{
+	float: left;
+	width: 550px;min-height: 300px;	 
+}
+#home #home-side{
+	float: left;
+	width: 272px;min-height: 300px;
+	margin-left: 15px;
+}
+
+#sub_link{
+	font-size: 14px;
+	border: 1px solid #e3ff95;
+}
+#sub_link ul{
+
+}
+#sub_link ul li{
+	
+}
+#sub_link a{
+	display: block;
+	width: 148px; height: 25px;
+	padding-left: 10px;
+	cursor: pointer;
+	padding-top: 3px;
+	color: #29830a;
+}
+#sub_link a:hover{
+	background-color: #ffb113; 
+	color: #29830a;
+}
+
+/*重写状态宽度*/
+#state_box #state_input #state_body{
+	width:365px;
+}
+#state_box #state_num_wrapper{
+	position: absolute;
+	right: 50px; top: 70px;
+}
+/*首页侧边*/
+#home .friends{
+	border: 1px solid #e3ff95;
+}
+
+#home .friends h3{
+	font-size: 14px;
+	background-color:#e3ff95 ; 
+	padding: 3px;
+}
+#home .friends ul{
+	margin: 5px 7px; 
+}
+#home .friends li{
+	float: left;
+	width: 50px;
+	margin: 3px 7px;
+	text-align: center; 
+}
+#home #my_followers{
+	 
+}
+#home #my_followed_users{
+	margin-top: 10px;
+
+}
+
+/* 首页状态，最新动态 */
+.activity{
+	 width: 550px;
+	 font-size: 14px;
+	 margin-top: 10px;
+	 padding-bottom: 10px;
+	 border-bottom: 1px solid #e3ff95;
+
+}
+.activity_avatar{
+	 float: left;
+}
+.activity_message{
+	 float: left;
+	 margin-left: 10px;
+
+	 width: 490px;
+
+}
+.activity .time{
+	position: relative;
+	bottom: 1px;
+	 color: #767676;
+	 font-size: 12px;
+}
+.activity .activity_body{
+	color: #3d3d3d; 
+	font-size: 12px;
+	margin-top: 3px;
+	line-height: 18px;
+}
