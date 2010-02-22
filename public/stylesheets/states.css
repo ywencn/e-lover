@@ -4,7 +4,6 @@
 #states_side{
 	float: left; 
 	width: 160px;min-height: 500px;
-	background-color: red;
 }
 #states_body{
 	float: left; 
@@ -15,7 +14,7 @@
 	float: left; 
 	margin-left: 15px;
 	width: 210px;min-height: 500px;
-	background-color: green;
+
 }
 
 /* state box BEGIN*/

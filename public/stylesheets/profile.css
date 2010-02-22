@@ -1,0 +1,54 @@
+#profile{
+	 
+}
+#profile_info{
+	 width: 200px;
+	 float: left;
+	 min-height: 400px;
+}
+#profile_main{
+	 margin-left: 15px;
+	 float: left;
+	 width: 797px;
+}
+#profile_title{
+	 clear: both; 
+	 min-height: 30px;
+	 font-size: 16px;
+}
+
+#profile_body{
+	 width: 545px;
+	 float: left;
+	 min-height: 400px;
+	 border: 1px solid #ccc;
+	 padding: 5px;
+}
+#profile_body li{
+	margin-bottom: 10px; 
+}
+#profile_body .activity_body{
+	color: #4c4c4c; 
+}
+#profile_side{
+	 width: 220px;
+	 float: left;
+	 margin-left: 15px;
+	 min-height: 400px;
+}
+#user_info{
+	border: 1px solid #e3ff95; 
+	height: 200px;
+}
+#user_info #avatar{
+	text-align: center; 
+	border: 1px solid #ccc;
+	background-color: #ffffff;
+	width: 110px;
+}
+#user_info #avatar img{
+	margin: 5px; 
+}
+#profile_body h3{
+	 border-bottom: 1px solid #ccc;
+}

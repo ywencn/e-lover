@@ -1,4 +1,6 @@
 class ActivitiesController < ApplicationController
+  before_filter :login_required
+  
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy

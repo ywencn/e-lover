@@ -1,0 +1,50 @@
+#login_wrapper{
+	 
+}
+#login_side{
+	float: left; 
+	width: 220px;
+	min-height: 400px;
+}
+#login_main{
+	 float: left;
+	 width: 775px;
+	 min-height: 400px;
+	 margin-left: 15px;
+	 border: 1px solid #ccc;
+}
+#login{
+	 
+}
+#login table{
+	border: 1px solid #0D63FD;
+	width: 220px;
+}
+#login table th{
+	background:#0D63FD url(/images/public/blue_title_bg0.png) repeat-x;
+	height: 25px; 
+	color: #ffffff;
+	padding-left: 10px;
+	font-size: 14px;
+}
+#login table td{
+	text-align: center;
+}
+#login table td.label{
+	text-align: left; 
+	padding-left: 10px;
+	font-size: 14px;
+}
+#login table .text_field{
+	width: 200px;
+	height: 20px;
+	font-size: 18px; 
+	margin: 0px auto;
+	text-align: left;
+}
+#notice{
+	border: 1px dotted #ff7c10; 
+	background-color: #ffcc68;
+	text-align: center;
+	margin-bottom: 5px;
+}

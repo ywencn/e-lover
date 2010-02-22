@@ -55,28 +55,29 @@
 	right: 50px; top: 70px;
 }
 /*首页侧边*/
-#home .friends{
+.friends{
 	border: 1px solid #e3ff95;
 }
 
-#home .friends h3{
+ .friends h3{
 	font-size: 14px;
 	background-color:#e3ff95 ; 
 	padding: 3px;
 }
-#home .friends ul{
+ .friends ul{
 	margin: 5px 7px; 
+	min-height: 50px;
 }
-#home .friends li{
+ .friends li{
 	float: left;
 	width: 50px;
 	margin: 3px 7px;
 	text-align: center; 
 }
-#home #my_followers{
+ #my_followers{
 	 
 }
-#home #my_followed_users{
+ #my_followed_users{
 	margin-top: 10px;
 
 }

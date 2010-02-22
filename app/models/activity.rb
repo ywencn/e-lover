@@ -17,5 +17,9 @@ class Activity < ActiveRecord::Base
   belongs_to :item, :polymorphic => true
   belongs_to :user
   has_many :feeds
+  
+  def self.global_activities
+    find(:all,:order=>"created_at desc",:limit=>15)
+  end
 end
 

@@ -27,4 +27,21 @@ private
   def current_user  
     @current_user = current_user_session && current_user_session.record  
   end
+  
+  def log_in?
+    current_user
+  end
+  
+  def login_required
+    unless log_in?
+      flash[:notice]="请登录后再查看该内容。"
+      store_location
+      redirect_to login_path
+    end
+  end
 end
+
+
+
+
+

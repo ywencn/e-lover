@@ -1,4 +1,6 @@
 class ConnectionsController < ApplicationController
+  before_filter :login_required
+  
   def index
     @connections = Connection.all
   end

@@ -166,7 +166,9 @@ a.username_link{
 	padding: 5px;	
 	margin-top: 5px;
 }
-
-
-
-
+/* formate of time_ago_in_words() */
+.time_ago{
+	font-size: 11px;
+	color: #666;
+	font-style: italic; 
+}

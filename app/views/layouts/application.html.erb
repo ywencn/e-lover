@@ -13,11 +13,11 @@
 		<div id="header">
 			<div id="user_nav">  
 			  <% if current_user %>  
-			    <%= link_to "Edit profile", edit_user_path(:current) %>  
-			    <%= link_to "Logout", logout_path %>  
+			    <%= link_to "编辑个人资料", edit_user_path(:current) %>  
+			    <%= link_to "退出", logout_path %>  
 			  <% else %>  
-			    <%= link_to "Register", new_user_path %>  
-			    <%= link_to "Log in", login_path %>  
+			    <%= link_to "注册", new_user_path %>  
+			    <%= link_to "登录", login_path %>  
 			  <% end %>  
 			</div>
 			<div id="globallink_wrapper">

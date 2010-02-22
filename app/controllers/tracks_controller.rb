@@ -1,4 +1,7 @@
 class TracksController < ApplicationController
+  before_filter :login_required
+  
+  
   def create
     @track = Track.new(params[:track])
     if @track.save

@@ -28,3 +28,16 @@
 #signup_button{
 	margin: 10px auto 10px auto;
 }
+/* users/index */
+#user_list{
+	 
+}
+#user_list li{
+	float: left; 
+	width: 50px;
+	text-align: center;
+	margin: 5px 10px;
+}
+#user_list h2{
+	font-size: 16px; 
+}

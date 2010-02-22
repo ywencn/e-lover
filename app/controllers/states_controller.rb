@@ -1,6 +1,7 @@
 class StatesController < ApplicationController
   
   before_filter :find_user ,:except=>:create
+  before_filter :login_required
   
   def index
     store_location

@@ -1,18 +1,40 @@
 <%title "#{@user.username}的个人主页"%>
-<%= stylesheet 'profile'%>
-<div id="profile">
+<%= stylesheet "profile","home"%>
+<div id="profile" class="clearfix">
 	<div id="profile_info">
-		
+		<div id="user_info">
+			<div id="avatar">
+				<%= avatar(@user)%>
+			</div>
+		</div>
 	</div>
-	<div id="profile_main">
+	<div id="profile_main" class="clearfix">
 		<div id="profile_title">
-			
+			<%= @user.username %>:
+			<%= @state ? @state.body : "暂时没有发布任何状态."  %> 
+			<span class="time_ago">
+				<%= "#{time_ago_in_words(@state.created_at)} ago" if @state %>
+			</span>
 		</div>
 		<div id="profile_body">
-
+			<div id="activities">
+				<h3>Ta最近都干了些啥:</h3>
+				<ul>
+					<% for activity in @activities %>
+						<li><%= feed_message(activity)%></li>
+					<% end -%>
+				</ul>
+			</div>
 		</div>
 		<div id="profile_side">
-
+			<div id="my_followers" class="clearfix friends">
+				<h3>关注Ta的人:</h3>	
+					<ul><%= render :partial => "/shared/side_followers_list", :collection => @followers,:as => :user%></ul>
+			</div><!--end friends-->
+			<div id="my_followed_users" class="clearfix friends">
+				<h3>Ta关注的人:</h3>	
+				<ul><%= render :partial => "/shared/side_followers_list", :collection => @followed_users,:as => :user%></ul>
+			</div><!--end friends-->
 		</div>
 	</div>
 	

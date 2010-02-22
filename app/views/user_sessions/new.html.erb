@@ -1,18 +1,58 @@
 <% title "Log in" %>  
-  
-<% form_for @user_session do |form| %>  
-<%= form.error_messages %>  
-<ol class="formList">  
-  <li>  
-    <%= form.label :email, "email" %>  
-    <%= form.text_field :email %>  
-  </li>  
-  <li>  
-    <%= form.label :password, "Password" %>  
-    <%= form.password_field :password %>  
-  </li>  
-  <li>  
-    <%= form.submit "Submit" %>  
-  </li>  
-</ol>  
-<% end %>
+<%= stylesheet 'login'%>
+<div id="login_wrapper" class="clearfix">
+	<div id="login_side">
+		<%= content_tag("div",flash[:notice],"id"=>"notice") if flash[:notice]%>
+		<% form_for @user_session do |form| %>  
+		<%= form.error_messages %>
+			<div id="login">
+				<table>
+					<tr>
+						<th>登录:</th>
+					</tr>
+					<tr>
+						<td class="label"	>Email:</td>
+					</tr>
+					<tr>
+						<td><%= form.text_field :email ,:class=>"text_field"%></td>
+					</tr>
+					<tr>
+						<td class="label">密码:</td>
+					</tr>
+					<tr>
+						<td><%= form.password_field :password ,:class=>"text_field"%></td>
+					</tr>
+					<tr>
+						<td style="text-align:center;height:50px;">
+							<%= image_submit_tag("/images/button/login_button.png", :disabled => false,:id=>"login_button") %>
+
+						</td>
+					</tr>
+				</table>
+			</div>
+		<% end %>
+	</div>
+	<div id="login_main">
+		<div id="logbal_activities">
+			<ul>
+				<% for activity in @global_activities%>
+				<li><%= feed_message(activity)%></li>
+				<% end -%>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

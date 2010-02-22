@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :load_user, :only => [:show,:edit, :destroy]
+  before_filter :login_required, :except =>[:new, :create]
   def new  
       @user = User.new  
   end
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])  
     if @user.save  
       flash[:notice] = "Registration successful."  
-      redirect_to root_url  
+      redirect_to :action =>'avatar',:id=>current_user.id
     else  
       render :action => 'new'  
     end  
@@ -103,7 +104,7 @@ class UsersController < ApplicationController
             img.resize 50  and Dir.chdir avatar_50_50   and img.write photo_name  
             img.resize 40  and Dir.chdir avatar_40_40   and img.write photo_name  
           end  
-          redirect_to user_path(current_user)
+          redirect_to root_url
         end  
       end  
   end

@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   include TrackLogger
   before_filter :find_user ,:only=>[:index]
   before_filter :store_location,:only=>[:index,:show]
+  before_filter :login_required
+  
   def index
     @posts = @user.posts.paginate :all,:page=>params[:page],:per_page=>10,:order=>"created_at desc"
   end

@@ -1,10 +1,17 @@
 <%= flash[:notice]%>
-<ul>
-	<% for user in @users %>
-		<li>
-			<%= avatar(user,"40_40")%>
-			<%= username_link(user)%>
-			<%= follow_button(user)%>
-		</li>
-	<% end -%>
-</ul>
+<%= stylesheet 'users'%>
+<div id="user_list" class="clearfix">
+	<h2>浏览全部用户</h2>
+	<div id="user_list_body">
+		<ul>
+			<% for user in @users %>
+				<li>
+					<%= avatar(user,"40_40")%>
+					<%= username_link(user)%>
+					<%= follow_button(user)%>
+				</li>
+			<% end -%>
+		</ul>
+	</div>
+</div>
+
