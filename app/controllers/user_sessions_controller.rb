@@ -1,8 +1,9 @@
 class UserSessionsController < ApplicationController
   before_filter :login_required , :except=>[:new,:create]
+  before_filter :global_activities
   def new  
     @user_session = UserSession.new
-    @global_activities = Activity.global_activities
+
   end
   
   def create  
@@ -20,6 +21,12 @@ class UserSessionsController < ApplicationController
     @user_session.destroy  
     flash[:notice] = "Successfully logged out."  
     redirect_to root_url  
+  end
+
+private
+
+  def global_activities
+    @global_activities = Activity.global_activities
   end
 
 end

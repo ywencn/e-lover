@@ -14,6 +14,8 @@
 class Comment < ActiveRecord::Base
   include ActivityLogger
   
+  index [:item_id, :item_type] ,:order=>"created_at desc"
+  
   belongs_to :user
   belongs_to :item ,
              :counter_cache => :comments_count, 

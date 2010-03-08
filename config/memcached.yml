@@ -1,0 +1,20 @@
+development:
+  ttl: 604800
+  namespace: e-lover
+  sessions: false
+  debug: false
+  servers: localhost:11211
+  
+test:
+  ttl: 604800
+  namespace: ...
+  sessions: false
+  debug: false
+  servers: localhost:11211
+
+production:
+  ttl: 604800
+  namespace: ...
+  sessions: false
+  debug: false
+  servers: localhost:11211

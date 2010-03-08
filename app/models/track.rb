@@ -1,4 +1,7 @@
 class Track < ActiveRecord::Base
+  
+  index [:item_id, :item_type]
+  
   belongs_to :item ,
              :polymorphic => true
   belongs_to :user
