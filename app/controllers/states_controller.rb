@@ -8,8 +8,8 @@ class StatesController < ApplicationController
     @state = State.new
     @states = @user.states.paginate :page => params[:page],
                              :per_page => 10,
-                             :order => "created_at desc",
-                             :include =>[:user,:comments,{:comments => :user}]
+                             :order => "created_at desc"
+                        #     :include =>[:user,:comments,{:comments => :user}]
     @comment=Comment.new
   end
   

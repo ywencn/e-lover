@@ -2,6 +2,8 @@ class Post < ActiveRecord::Base
  # attr_accessible :title, :body, :comments_count, :user_id, :last_replid_user_id, :last_replid_time, :publish_to_blog, :publish_to_group
  include ActivityLogger
  
+ index :user_id
+ 
  belongs_to :user
  belongs_to :group
  belongs_to :last_replied_user, :class_name=>"User", :foreign_key => "last_replied_user_id"

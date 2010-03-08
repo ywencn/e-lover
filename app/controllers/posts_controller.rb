@@ -12,9 +12,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     Post.increment_counter(:read_count,params[:id])
     add_track(:item => @post, :author => @post.user ,:reader => current_user)
-   # Track.create!(:item => @post, :user =>@post.user)
     @comment = Comment.new
-    
   end
   
   def new

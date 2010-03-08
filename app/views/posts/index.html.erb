@@ -20,7 +20,7 @@
 					</div>
 						<%#=h truncate(strip_tags(post.body ).split(//).to_s,400) %>
 						<div class="preview">
-							<%=h truncate(strip_tags(post.body ).to_s,200) %>
+							<%=h truncate(strip_tags(post.body ).to_s,:length=>200) %>
 						</div>
 						<div class="info">
 							<div class="count">
